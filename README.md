@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tino Ha</title>
+  <link rel="icon" href="assets/logo-blue.png" type="image/png">
   <style>
     /* Reset & Base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,8 +33,7 @@
       width: 48px;
       height: 48px;
       margin-bottom: 24px;
-      /* Thay bằng đường dẫn logo PNG của bạn */
-      background: url('your-logo-blue.png') center/contain no-repeat;
+      background: url('assets/logo-blue.png') center/contain no-repeat;
     }
     h1 {
       font-size: 2.8rem;
@@ -110,7 +110,13 @@
     .icon-item {
       width: 64px;
       height: 64px;
+      background: center/contain no-repeat;
     }
+    .icon-ai { background-image: url('assets/icon-ai.png'); }
+    .icon-chain { background-image: url('assets/icon-chain.png'); }
+    .icon-mask { background-image: url('assets/icon-mask.png'); }
+    .icon-orchestra { background-image: url('assets/icon-orchestra.png'); }
+    .icon-zkp { background-image: url('assets/icon-zkp.png'); }
 
     /* Footer */
     .footer {
@@ -146,17 +152,17 @@
     <h2>Featured Work</h2>
     <div class="projects">
       <div class="project-card">
-        <img src="project1.png" alt="Endless Dev">
+        <img src="assets/project1.png" alt="Endless Dev">
         <h3>Endless Dev</h3>
         <p>Unlearning in Web3</p>
       </div>
       <div class="project-card">
-        <img src="project2.png" alt="Spicenet">
+        <img src="assets/project2.png" alt="Spicenet">
         <h3>Spicenet</h3>
         <p>DeFi Explainer</p>
       </div>
       <div class="project-card">
-        <img src="project3.png" alt="ChainOpera">
+        <img src="assets/project3.png" alt="ChainOpera">
         <h3>ChainOpera AI</h3>
         <p>Creative Review</p>
       </div>
@@ -165,11 +171,11 @@
 
   <!-- Icons Strip -->
   <div class="icons-strip">
-    <img class="icon-item" src="icon-ai.png" alt="AI">
-    <img class="icon-item" src="icon-chain.png" alt="Blockchain">
-    <img class="icon-item" src="icon-mask.png" alt="Privacy">
-    <img class="icon-item" src="icon-orchestra.png" alt="Orchestration">
-    <img class="icon-item" src="icon-zkp.png" alt="ZKP">
+    <div class="icon-item icon-ai" aria-label="AI"></div>
+    <div class="icon-item icon-chain" aria-label="Blockchain"></div>
+    <div class="icon-item icon-mask" aria-label="Privacy"></div>
+    <div class="icon-item icon-orchestra" aria-label="Orchestration"></div>
+    <div class="icon-item icon-zkp" aria-label="ZKP"></div>
   </div>
 
   <!-- Footer -->

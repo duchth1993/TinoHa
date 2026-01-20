@@ -16,18 +16,36 @@
       overflow-x: hidden;
     }
 
-    /* Neon Blue Gradient */
+    /* Neon Blue Gradient with Depth */
     :root {
       --neon-blue-start: #00f7ff;
+      --neon-blue-mid: #00aaff;
       --neon-blue-end: #0066ff;
-      --neon-gradient: linear-gradient(135deg, var(--neon-blue-start), var(--neon-blue-end));
     }
 
-    /* Hero */
+    /* Hero with Animated Gradient Background */
     .hero {
       padding: 80px 5%;
       text-align: center;
-      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 30%, var(--neon-blue-start), transparent 40%),
+                  radial-gradient(circle at 70% 70%, var(--neon-blue-end), transparent 50%);
+      opacity: 0.15;
+      z-index: -1;
+      animation: pulse 12s infinite alternate;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.12; }
+      100% { transform: scale(1.05); opacity: 0.18; }
     }
     .logo {
       width: 48px;
@@ -39,7 +57,7 @@
       font-size: 2.8rem;
       font-weight: 800;
       margin-bottom: 12px;
-      background: var(--neon-gradient);
+      background: linear-gradient(135deg, var(--neon-blue-start), var(--neon-blue-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -52,7 +70,7 @@
     .cta-button {
       display: inline-block;
       padding: 12px 28px;
-      background: var(--neon-gradient);
+      background: linear-gradient(135deg, var(--neon-blue-start), var(--neon-blue-end));
       color: white;
       text-decoration: none;
       border-radius: 30px;
@@ -72,9 +90,27 @@
       margin-bottom: 24px;
       color: #000;
     }
+
+    /* About with Avatar */
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .avatar {
+      width: 128px;
+      height: 128px;
+      border-radius: 12px;
+      background: url('assets/avatar.png') center/cover no-repeat;
+      border: 2px solid #e0f7ff;
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15);
+    }
     .about p {
       font-size: 1.1rem;
       color: #444;
+      text-align: center;
+      max-width: 600px;
     }
 
     /* Projects Grid */
@@ -143,7 +179,7 @@
 
   <!-- About -->
   <div class="section about">
-    <h2>About</h2>
+    <div class="avatar"></div>
     <p>I build at the intersection of artificial intelligence and decentralized systems — where creativity meets verifiable truth.</p>
   </div>
 

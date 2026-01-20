@@ -181,6 +181,72 @@
       color: #666;
     }
 
+    /* Creator Works */
+    .creator-works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .creator-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow);
+    }
+    .creator-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.12);
+    }
+    .creator-card img {
+      width: 100%;
+      height: 128px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      border-radius: 8px;
+    }
+    .creator-card h3 {
+      font-size: 1.1rem;
+      margin: 8px 0;
+      color: #000;
+    }
+    .creator-card p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* Current Projects Table */
+    .current-projects {
+      background: var(--card-bg);
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
+    .project-list {
+      list-style: none;
+      padding: 0;
+    }
+    .project-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .project-name {
+      font-weight: 600;
+      color: #000;
+    }
+    .project-status {
+      font-weight: 500;
+      color: #0066ff;
+    }
+    .project-item:last-child {
+      border-bottom: none;
+    }
+
     /* Icons Strip */
     .icons-strip {
       display: flex;
@@ -220,6 +286,39 @@
       text-decoration: none;
       font-weight: 600;
     }
+
+    /* Telegram Box */
+    .telegram-box {
+      background: #0088cc;
+      color: white;
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 40px 0;
+      box-shadow: 0 4px 12px rgba(0, 136, 204, 0.2);
+    }
+    .telegram-box h3 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+    .telegram-box p {
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    .telegram-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: white;
+      color: #0088cc;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .telegram-button:hover {
+      background: #f0f0f0;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -237,7 +336,14 @@
     <p>I build at the intersection of artificial intelligence and decentralized systems — where creativity meets verifiable truth.</p>
   </div>
 
-  <!-- Projects -->
+  <!-- Telegram Box -->
+  <div class="section telegram-box">
+    <h3>Join My Airdrop Community</h3>
+    <p>If you have <strong>Telegram</strong>, you can view and join <strong>Airdrop-Supermarketcap</strong> right away.</p>
+    <a href="https://t.me/superairdrop79" class="telegram-button">Open in Telegram</a>
+  </div>
+
+  <!-- Featured Work -->
   <div class="section">
     <h2>Featured Work</h2>
     <div class="projects">
@@ -256,6 +362,66 @@
         <h3>ChainOpera AI</h3>
         <p>Creative Review</p>
       </div>
+    </div>
+  </div>
+
+  <!-- Creator Works -->
+  <div class="section">
+    <h2>Creator Works</h2>
+    <div class="creator-works">
+      <div class="creator-card">
+        <img src="assets/nessy.png" alt="Nessy">
+        <h3>Nessy</h3>
+        <p>AI x Storytelling</p>
+      </div>
+      <div class="creator-card">
+        <img src="assets/coai.png" alt="Coai">
+        <h3>Coai</h3>
+        <p>Decentralized Identity</p>
+      </div>
+      <div class="creator-card">
+        <img src="assets/curious.png" alt="Curious">
+        <h3>Curious</h3>
+        <p>Lunar Role</p>
+      </div>
+      <div class="creator-card">
+        <img src="assets/tanssi.png" alt="Tanssi">
+        <h3>Tanssi</h3>
+        <p>OG Role</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Current Projects -->
+  <div class="section">
+    <h2>The Project I Am Currently Working On</h2>
+    <div class="current-projects">
+      <ul class="project-list">
+        <li class="project-item">
+          <span class="project-name">ChainOpera AI</span>
+          <span class="project-status">Active</span>
+        </li>
+        <li class="project-item">
+          <span class="project-name">LIFE AI</span>
+          <span class="project-status">OG role</span>
+        </li>
+        <li class="project-item">
+          <span class="project-name">Curious</span>
+          <span class="project-status">Lunar role</span>
+        </li>
+        <li class="project-item">
+          <span class="project-name">Endless</span>
+          <span class="project-status">Builder & Fantast</span>
+        </li>
+        <li class="project-item">
+          <span class="project-name">Tanssi</span>
+          <span class="project-status">OG role</span>
+        </li>
+        <li class="project-item">
+          <span class="project-name">ZY NFT</span>
+          <span class="project-status">OG role</span>
+        </li>
+      </ul>
     </div>
   </div>
 
